@@ -24,4 +24,8 @@ export class BlockchainViewerComponent implements OnInit {
   ngOnInit() {
   }
 
+  showTransactions(block){
+    this.selectedBlock = block;
+  }
+
 }
