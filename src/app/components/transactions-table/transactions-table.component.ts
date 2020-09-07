@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-transactions-table',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionsTableComponent implements OnInit {
 
+  //declare a variable where the input will be stored
+  @Input() public transactions = [];
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
