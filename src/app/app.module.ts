@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlockchainViewerComponent } from './pages/blockchain-viewer/blockchain-viewer.component';
+import { BlockViewComponent } from './components/block-view/block-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlockchainViewerComponent
+    BlockchainViewerComponent,
+    BlockViewComponent
   ],
   imports: [
     BrowserModule,
