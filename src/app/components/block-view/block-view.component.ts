@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-block-view',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlockViewComponent implements OnInit {
 
+  //get the input and store it in a variable called block
+  @Input() public block;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
