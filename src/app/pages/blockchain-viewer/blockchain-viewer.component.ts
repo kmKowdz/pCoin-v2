@@ -11,10 +11,14 @@ export class BlockchainViewerComponent implements OnInit {
   
   //create a variable to store the blocks
   public blocks = [];
+  //add an attribute for the selected block
+  public selectedBlock = null;
+
 
   //read all blocks in the array
   constructor(private blockchainService: BlockchainService) { 
     this.blocks = blockchainService.getBlocks();
+    this.selectedBlock = this.blocks[0]; // initialize the attribute
   }
 
   ngOnInit() {
