@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+//import blockchain service
+import { BlockchainService } from '../../services/blockchain.service';
 
 @Component({
   selector: 'app-transactions-table',
@@ -10,7 +12,8 @@ export class TransactionsTableComponent implements OnInit {
   //declare a variable where the input will be stored
   @Input() public transactions = [];
 
-  constructor() { }
+  //initialize blockchainservice
+  constructor(public blockchainService: BlockchainService) { }
 
   ngOnInit() {
   }
