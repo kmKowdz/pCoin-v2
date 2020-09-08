@@ -7,7 +7,7 @@
     <app-block-view
         *ngFor="let block of blocks"
         [block]="block"
-        [click]="showTransactions(block)"
+        (click)="showTransactions(block)"
     ></app-block-view>
 </div>
 
