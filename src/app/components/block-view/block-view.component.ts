@@ -28,7 +28,7 @@ export class BlockViewComponent implements OnInit {
   }
 
   //from savjee's source code
-  //to get transaction's length
+  //method to get transaction's length
   blockHasTx() {
     return this.block.transactions.length > 0;
   }
