@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'settings', component: SettingsComponent }, //add path to where the settings component will be found
   { path: 'new/transaction', component: CreateTransactionComponent }, //add path to where the create transaction component will be located
   { path: 'wallet/:address', component: WalletBalanceComponent }, //add path to route to once the request about wallet balance is initiated
-  { path: 'new/Transaction/pending', component: PendingTransactionsComponent}, //add path for the pending transactions component
+  { path: 'new/transaction/pending', component: PendingTransactionsComponent}, //add path for the pending transactions component
 ];
 
 @NgModule({
