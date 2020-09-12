@@ -10,7 +10,8 @@ import { BlockchainService } from '../../services/blockchain.service';
 export class TransactionsTableComponent implements OnInit {
 
   //declare a variable where the input will be stored
-  @Input() public transactions = [];
+  @Input() 
+  public transactions = [];
 
   //initialize blockchainservice
   constructor(public blockchainService: BlockchainService) { }
