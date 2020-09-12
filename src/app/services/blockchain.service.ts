@@ -12,7 +12,7 @@ export class BlockchainService {
   //generate an instance of a blockchain
   public blockchainInstance = new Blockchain();
   //create a variable to store the walletkeys
-  public walletKeys = []; //array for multiple key pairs
+  public walletKeys: Array<IWalletKey> = []; //array for multiple key pairs
 
   //instantiate the difficulty level, mine pending transactions and generate wallet keys as this service is run
   constructor() { 
@@ -54,4 +54,10 @@ export class BlockchainService {
       privateKey: key.getPrivate('hex'),
     });
   }
+}
+
+export interface IWalletKey {
+  keyObj: any;
+  publicKey: string;
+  privateKey: string;
 }
