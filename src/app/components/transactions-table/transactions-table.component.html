@@ -26,7 +26,7 @@
                 <!-- add a method to display a prompt if the wallet address is from the current user -->
                 <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.fromAddress)">
                     <br><small>(That's yours!)</small>
-                  </span>
+                </span>
             </td>
             <td class="text-truncate" style="max-width: 100px;">
                 {{tx.toAddress}}
