@@ -22,6 +22,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  //method to display notification about the pending transactions
+  thereArePendingTransactions() {
+    return this.blockchain.pendingTransactions.length > 0;
+  }
+
   //add a method to dismiss the info message
   dismissInfoMessage() {
     this.showInfoMessage = false;
