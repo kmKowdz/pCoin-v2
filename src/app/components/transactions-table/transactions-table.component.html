@@ -18,8 +18,15 @@
         <tr *ngFor="let tx of transactions; index as index">
             <td>{{index}}</td>
             <td class="text-truncate" style="max-width: 100px;">
-                {{tx.fromAddress}}
+                <!-- {{tx.fromAddress} -->
+                <!-- route to the wallet component to display the wallet-address -->
+                <a [routerLink]="['/wallet', tx.fromAddress]" *ngIf="tx.fromAddress !== null">{{tx.fromAddress}}</a>
                 <span *ngIf="tx.fromAddress === null">System</span>
+
+                <!-- add a method to display a prompt if the wallet address is from the current user -->
+                <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.fromAddress)">
+                    <br><small>(That's yours!)</small>
+                  </span>
             </td>
             <td class="text-truncate" style="max-width: 100px;">
                 {{tx.toAddress}}
