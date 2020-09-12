@@ -8,12 +8,16 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { CreateTransactionComponent } from './pages/create-transaction/create-transaction.component';
 //import wallet balance component
 import { WalletBalanceComponent } from './pages/wallet-balance/wallet-balance.component';
+//import Pending transactions component
+import { PendingTransactionsComponent } from './pages/pending-transactions/pending-transactions.component';
+
 
 const routes: Routes = [
   { path: '', component: BlockchainViewerComponent }, //add path where the component will be located
   { path: 'settings', component: SettingsComponent }, //add path to where the settings component will be found
   { path: 'new/transaction', component: CreateTransactionComponent }, //add path to where the create transaction component will be located
   { path: 'wallet/:address', component: WalletBalanceComponent }, //add path to route to once the request about wallet balance is initiated
+  { path: 'new/Transaction/pending', component: PendingTransactionsComponent}, //add path for the pending transactions component
 ];
 
 @NgModule({
