@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import blockchain service
 import { BlockchainService } from 'src/app/services/blockchain.service';
 
 @Component({
@@ -8,10 +9,10 @@ import { BlockchainService } from 'src/app/services/blockchain.service';
 })
 export class PendingTransactionsComponent implements OnInit {
 
-  //declare a pendingtransactions variable
+  //declare a pending transactions variable
   public pendingTransactions = [];
 
-  //inject blockchainservices
+  //inject blockchain services
   constructor(private blockchainService: BlockchainService) {
     this.pendingTransactions = blockchainService.getPendingTransactions();
    }
