@@ -11,6 +11,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { CreateTransactionComponent } from './pages/create-transaction/create-transaction.component';
 import { WalletBalanceComponent } from './pages/wallet-balance/wallet-balance.component';
 import { PendingTransactionsComponent } from './pages/pending-transactions/pending-transactions.component';
+import { BlockchainService } from './services/blockchain.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { PendingTransactionsComponent } from './pages/pending-transactions/pendi
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    BlockchainService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
