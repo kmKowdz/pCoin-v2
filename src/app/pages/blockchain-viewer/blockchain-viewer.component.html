@@ -7,6 +7,7 @@
     <app-block-view
         *ngFor="let block of blocks"
         [block]="block"
+        [selectedBlock]="selectedBlock"
         (click)="showTransactions(block)"
     ></app-block-view>
 </div>
@@ -15,7 +16,7 @@
 
 <!-- add container where the transaction inside the block will be viewed -->
 <div class="container">
-    <h1>Transactions inside block</h1>
+    <h1>Transactions inside block {{ getBlockNumber(selectedBlock) }}</h1>
     <!-- table should receive a list of transactions that it has to visualize -->
     <!-- pass along the transactions in the selected block -->
     <app-transactions-table

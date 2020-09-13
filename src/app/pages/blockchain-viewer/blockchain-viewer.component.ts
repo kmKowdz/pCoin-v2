@@ -24,8 +24,25 @@ export class BlockchainViewerComponent implements OnInit {
   ngOnInit() {
   }
 
-  showTransactions(block){
+  showTransactions(block) {
     this.selectedBlock = block;
+    return false;
+  }
+
+  blockHasTx(block) {
+    return block.transactions.length > 0;
+  }
+
+  selectedBlockHasTx() {
+    return this.blockHasTx(this.selectedBlock);
+  }
+
+  isSelectedBlock(block) {
+    return this.selectedBlock === block;
+  }
+
+  getBlockNumber(block) {
+    return this.blocks.indexOf(block) + 1;
   }
 
 }
