@@ -54,6 +54,11 @@ export class BlockchainService {
       privateKey: key.getPrivate('hex'),
     });
   }
+
+  // method to get the wallet address if it is from the current user
+  addressIsFromCurrentUser(address) {
+    return address === this.walletKeys[0].publicKey;
+  }
 }
 
 export interface IWalletKey {
