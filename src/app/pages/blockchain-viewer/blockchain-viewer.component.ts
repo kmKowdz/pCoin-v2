@@ -17,8 +17,8 @@ export class BlockchainViewerComponent implements OnInit {
 
   //read all blocks in the array
   constructor(private blockchainService: BlockchainService) { 
-    this.blocks = blockchainService.getBlocks();
-    this.selectedBlock = this.blocks[0]; // initialize the attribute
+    this.blocks = blockchainService.blockchainInstance.chain;
+    this.selectedBlock = this.blocks[0];
   }
 
   ngOnInit() {
