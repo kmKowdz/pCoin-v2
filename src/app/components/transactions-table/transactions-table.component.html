@@ -29,7 +29,14 @@
                 </span>
             </td>
             <td class="text-truncate" style="max-width: 100px;">
-                {{tx.toAddress}}
+                <!-- {{tx.toAddress}} -->
+                <!-- route to the wallet component to display the wallet-address -->
+                <a [routerLink]="['/wallet', tx.toAddress]">{{tx.toAddress}}</a>
+
+                <!-- add a method to display a prompt if the wallet address is from the current user -->
+                <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.toAddress)">
+                  <br><small>(That's yours!)</small>
+                </span>
             </td>
             <td>
                 {{tx.amount}}
